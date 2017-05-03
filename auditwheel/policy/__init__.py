@@ -23,7 +23,7 @@ _PLATFORM_REPLACEMENT_MAP = {
 # Windows probably, but there's not much reason to inspect foreign package
 # that won't run on the platform.
 if platform != 'linux':
-    print('Error: This tool only supports Linux', file=sys.stderr)
+    sys.stderr.write('Error: This tool only supports Linux')
     sys.exit(1)
 
 # if linkage != 'ELF':
