@@ -46,7 +46,7 @@ def execute(args, p):
         try:
             out_wheel = add_platforms(ctx, [wheel_abi.overall_tag])
         except WheelToolsError as e:
-            print('\n%s.' % str(e), file=sys.stderr)
+            sys.stderr.write('\n%s.' % str(e))
             return 1
 
         if out_wheel:
